@@ -6,24 +6,24 @@ function (Settings) {
   }
   return new Settings({
     datasources: {
-      influx: {
-        default: true,
+      'metrics': {
         type: 'influxdb',
         url: prefix + "/influx/db/<--DB_NAME-->",
         username: "<--USER-->",
         password: "<--PASS-->"
       },
-      elasticsearch: {
-        type: 'elasticsearch',
-        url: prefix + "/elasticsearch",
-        index: 'grafana-dash',
+      'grafana': {
+        type: 'influxdb',
+        url: prefix + "/influx/db/<--GRAFANA_DB_NAME-->",
+        username: "<--USER-->",
+        password: "<--PASS-->",
         grafanaDB: true
       }
     },
     search: {
       max_results: 100
     },
-    window_title_prefix: 'Kubernetes - ',
+    window_title_prefix: 'Heapster - ',
     default_route: "<--DASHBOARD-->",
     timezoneOffset: null,
     unsaved_changes_warning: true,
