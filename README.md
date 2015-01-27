@@ -1,5 +1,9 @@
 Modified from [heapster](https://github.com/GoogleCloudPlatform/heapster/tree/master/influx-grafana/grafana)
 
+What's different
+--------
+No need to use exposed InfluxDb.
+
 tutum-docker-grafana
 ====================
 
@@ -87,12 +91,3 @@ Here is an example:
 
 
 **by http://www.tutum.co**
-
-Modified
---------
-
-No need to use exposed Elasticsearch and InfluxDb.
-Using Kubernetes' service env var
-
-
-

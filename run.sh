@@ -22,6 +22,6 @@ if [ ! -f /.nginx_configured ]; then
     /set_nginx.sh
 fi
 
-echo "=> Grafana for heapster version: 0.2!"
+echo "=> Grafana for heapster version: 0.3!"
 echo "=> Starting and running Nginx..."
 /usr/sbin/nginx
