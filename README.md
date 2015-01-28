@@ -61,8 +61,8 @@ Configure the connection to InfluxDB
 `tutum/grafana` needs to know the information of your InfluxDB for configuration. Please provide the following environment variables when running your Grafana container:
 ```
 INFLUXDB_PROTO=http                         Protocol of your InfluxDB
-INFLUX_MASTER_SERVICE_HOST=**ChangeMe**     Host of your InfluxDB (without protocol)
-INFLUX_MASTER_SERVICE_PORT=8086             Port number of your InfluxDB
+INFLUXDB_SERVICE_HOST=**ChangeMe**          Host of your InfluxDB (without protocol)
+INFLUXDB_SERVICE_PORT=8086                  Port number of your InfluxDB
 INFLUXDB_NAME=**ChangeMe**                  Database name of your InfluxDB
 INFLUXDB_USER=root                          Username of your InfluxDB
 INFLUXDB_PASS=root                          Password of your InfluxDB
@@ -70,7 +70,7 @@ INFLUXDB_PASS=root                          Password of your InfluxDB
 
 Here is an example:
 
-    docker run -d -p 80:80 -e INFLUX_MASTER_SERVICE_HOST=influxdb-1-tifayuki.delta.tutum.io -e INFLUX_MASTER_SERVICE_PORT=8086 -e INFLUXDB_NAME=testdb -e INFLUXDB_USER=root -e INFLUXDB_PASS=root tutum/grafana
+    docker run -d -p 80:80 -e INFLUXDB_SERVICE_HOST=influxdb-1-tifayuki.delta.tutum.io -e INFLUXDB_SERVICE_PORT=8086 -e INFLUXDB_NAME=testdb -e INFLUXDB_USER=root -e INFLUXDB_PASS=root tutum/grafana
 
 
 Configure Elasticsearch to save and load dashboards
@@ -87,7 +87,7 @@ ELASTICSEARCH_PASS=**None**                 Password for elasticsearch if it has
 
 Here is an example:
 
-    docker run -d -p 80:80 -e INFLUX_MASTER_SERVICE_HOST=influxdb-1-tifayuki.delta.tutum.io -e INFLUX_MASTER_SERVICE_PORT=8086 -e INFLUXDB_NAME=testdb -e INFLUXDB_USER=root -e INFLUXDB_PASS=root -e ELASTICSEARCH_SERVICE_HOST=elasticsearch-1-tifayuki.beta.tutum.io -e ELASTICSEARCH_SERVICE_PORT=9200 -e ELASTICSEARCH_USER=admin -e ELASTICSEARCH_PASS=admin tutum/grafana
+    docker run -d -p 80:80 -e INFLUXDB_SERVICE_HOST=influxdb-1-tifayuki.delta.tutum.io -e INFLUXDB_SERVICE_PORT=8086 -e INFLUXDB_NAME=testdb -e INFLUXDB_USER=root -e INFLUXDB_PASS=root -e ELASTICSEARCH_SERVICE_HOST=elasticsearch-1-tifayuki.beta.tutum.io -e ELASTICSEARCH_SERVICE_PORT=9200 -e ELASTICSEARCH_USER=admin -e ELASTICSEARCH_PASS=admin tutum/grafana
 
 
 **by http://www.tutum.co**

@@ -1,3 +1,7 @@
+upstream upstream-influxdb {
+    server <--IDB-ADDR-->:<--IDB-PORT-->;
+}
+
 server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
@@ -23,6 +27,6 @@ server {
         proxy_read_timeout 1d;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
-        proxy_pass http://<--IDB-ADDR-->:<--IDB-PORT-->/$1$is_args$args;
+        proxy_pass http://upstream-influxdb/$1$is_args$args;
     }
 }
