@@ -262,7 +262,7 @@
             }
           ],
           "aliasColors": {},
-          "title": "Label 'name:heapster' CPU usage",
+          "title": "Label 'mon:heapster' CPU usage",
           "datasource": null,
           "renderer": "png",
           "annotate": {
@@ -356,7 +356,7 @@
             }
           ],
           "aliasColors": {},
-          "title": "Labels 'name:heapster' memory usage",
+          "title": "Labels 'mon:heapster' memory usage",
           "datasource": null,
           "renderer": "png",
           "annotate": {
@@ -444,7 +444,7 @@
             }
           ],
           "aliasColors": {},
-          "title": "Labels 'name:influx-grafana' CPU usage",
+          "title": "Labels 'db:influxdb' CPU usage",
           "datasource": null,
           "renderer": "png",
           "annotate": {
@@ -538,7 +538,7 @@
             }
           ],
           "aliasColors": {},
-          "title": "Labels 'name:influx-grafana' memory usage",
+          "title": "Labels 'db:influxdb' memory usage",
           "datasource": null,
           "renderer": "png",
           "annotate": {
