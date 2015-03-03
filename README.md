@@ -1,3 +1,5 @@
+This project is deprecated, using offical image instead
+
 Modified from [heapster](https://github.com/GoogleCloudPlatform/heapster/tree/master/influx-grafana/grafana)
 
 What's different
